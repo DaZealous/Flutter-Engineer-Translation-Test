@@ -63,6 +63,7 @@ class GridImages extends HookWidget {
                       mainAxisCellCount: 3.6,
                       child: Tile(
                         radius: 10,
+                        sliderPadding: 5,
                         index: 1,
                         imageUrl: AssetsData.imageTile2.absolutePath,
                       ),
@@ -71,6 +72,7 @@ class GridImages extends HookWidget {
                       crossAxisCellCount: 2,
                       mainAxisCellCount: 1.8,
                       child: Tile(
+                        sliderPadding: 5,
                         radius: 10,
                         index: 2,
                         imageUrl: AssetsData.imageTile3.absolutePath,
@@ -80,6 +82,7 @@ class GridImages extends HookWidget {
                       crossAxisCellCount: 2,
                       mainAxisCellCount: 1.8,
                       child: Tile(
+                        sliderPadding: 5,
                         radius: 10,
                         index: 3,
                         imageUrl: AssetsData.imageTile4.absolutePath,
