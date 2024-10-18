@@ -6,14 +6,14 @@ import 'package:flutter_engineer_translation_test/presentation/search_page/searc
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomePage extends ConsumerWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
-  final List<Widget> pages = const [
-    SearchPage(),
-    Center(),
-    DashboardPage(),
-    Center(),
-    Center(),
+  final List<Widget> pages = [
+    const SearchPage(),
+    const Center(),
+    const DashboardPage(),
+    const Center(),
+    const Center(),
   ];
 
   @override

@@ -27,21 +27,18 @@ class CustomButton extends StatelessWidget {
         shape: shape ?? BoxShape.circle,
         color: backgroundColor,
       ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 23 - padding),
-        child: ClipOval(
-          child: Material(
-            color: Colors.transparent,
-            child: InkResponse(
-              splashColor: Colors.white,
-              onTap: onTap,
-              child: Padding(
-                padding: EdgeInsets.all(padding),
-                child: Center(
-                  child: image ?? Icon(
-                    icon,
-                    color: iconColor,
-                  ),
+      child: ClipOval(
+        child: Material(
+          color: Colors.transparent,
+          child: InkResponse(
+            splashColor: Colors.white,
+            onTap: onTap,
+            child: Padding(
+              padding: EdgeInsets.all(padding),
+              child: Center(
+                child: image ?? Icon(
+                  icon,
+                  color: iconColor,
                 ),
               ),
             ),

@@ -14,7 +14,7 @@ class GridImages extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final slideUpController =
-    useAnimationController(duration: const Duration(milliseconds: 1500));
+    useAnimationController(duration: const Duration(milliseconds: 1000));
 
     final slideUpAnimation = animationService.createSlideAnimation(slideUpController, 0.0, 1.0);
 

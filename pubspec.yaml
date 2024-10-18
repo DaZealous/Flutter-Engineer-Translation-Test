@@ -16,6 +16,12 @@ dependencies:
   get_it: ^7.2.0
   injectable: ^2.1.1
   flutter_hooks: ^0.18.0
+  location: ^7.0.0
+  flutter_map: ^7.0.2
+  geocoding: ^3.0.0
+  geolocator: ^13.0.1
+  latlong2: ^0.9.1
+  flutter_map_location_marker: ^9.1.1
 
 dev_dependencies:
   flutter_test:

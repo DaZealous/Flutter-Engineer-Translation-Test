@@ -1,17 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 enum AssetsData {
-  profileAvatar('profile_avatar.jpg'),
-  imageTile1('image_tile1.jpg'),
-  imageTile2('image_tile2.jpeg'),
-  imageTile3('image_tile3.jpeg'),
-  imageTile4('image_tile4.jpg');
+  profileAvatar('images/profile_avatar.jpg'),
+  imageTile1('images/image_tile1.jpg'),
+  imageTile2('images/image_tile2.jpeg'),
+  imageTile3('images/image_tile3.jpeg'),
+  imageTile4('images/image_tile4.jpg'),
+  searchIcon('icons/search_icon.svg'),
+  searchIconFilled('icons/search_icon_filled.svg'),
+  chatIcon('icons/chat_icon.svg'),
+  homeIcon('icons/home_icon.svg'),
+  favoriteIcon('icons/favorite_icon.svg'),
+  userIcon('icons/user_icon.svg'),
+  filterList('icons/filter_list.svg'),
+  filterIcon('icons/filter_icon.svg'),
+  locationUp('icons/location-up.svg'),
+  verifyIcon('icons/verify_icon.svg'),
+  walletIcon('icons/wallet-icon.svg'),
+  infrastructureIcon('icons/infrastructure_icon.svg'),
+  layersIcon('icons/layers_icon.svg');
 
   final String path;
 
   const AssetsData(this.path);
 
-  String get absolutePath => 'assets/images/$path';
+  String get absolutePath => 'assets/$path';
 
   Widget svgPicture({
     double? height,
@@ -20,8 +33,8 @@ enum AssetsData {
   }) =>
       SvgPicture.asset(
         absolutePath,
-        height: height,
-        width: width,
+        height: height ?? 40,
+        width: width ?? 40,
         colorFilter: color == null ? null : ColorFilter.mode(color, BlendMode.srcIn),
       );
 
@@ -30,4 +43,5 @@ enum AssetsData {
   Widget jpgPicture({BoxFit? fit}) {
     return Image.asset(absolutePath, fit: fit);
   }
+
 }

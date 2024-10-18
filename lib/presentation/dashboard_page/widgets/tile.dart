@@ -36,7 +36,7 @@ class Tile extends HookWidget {
 
     useEffect(() {
       Future.delayed(
-        const Duration(milliseconds: 1500),
+        const Duration(milliseconds: 1000),
       ).whenComplete(() => slideController.forward().then((_) => fadeController.forward()));
       return null;
     }, []);
@@ -78,6 +78,7 @@ class Tile extends HookWidget {
                         opacity: fadeAnimation,
                         child: Text(
                           'Gladkova St., 5',
+                          overflow: TextOverflow.ellipsis,
                           style: Theme.of(context).textTheme.titleSmall,
                         ),
                       ),

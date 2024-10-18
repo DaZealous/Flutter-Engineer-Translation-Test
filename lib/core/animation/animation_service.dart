@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
 abstract class AnimationService {
-  AnimationController createFadeController(TickerProvider vsync, {Duration? duration});
   Animation<double> createFadeAnimation(AnimationController controller);
   Animation<double> createZoomAnimation(AnimationController controller);
   Animation<Offset> createSlideAnimation(AnimationController controller, double dx, double dy);
@@ -10,13 +9,6 @@ abstract class AnimationService {
 
 @LazySingleton(as: AnimationService)
 class AnimationServiceImpl implements AnimationService {
-  @override
-  AnimationController createFadeController(TickerProvider vsync, {Duration? duration}) {
-    return AnimationController(
-      vsync: vsync,
-      duration: duration ?? const Duration(milliseconds: 500),
-    );
-  }
 
   @override
   Animation<double> createZoomAnimation(AnimationController controller) {

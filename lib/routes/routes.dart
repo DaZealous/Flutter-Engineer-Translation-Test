@@ -3,7 +3,7 @@ import 'package:flutter_engineer_translation_test/presentation/home_page/home_pa
 
 class AppRoutes {
   static Map<String, WidgetBuilder> routes = {
-    homePage: (context) => const HomePage(),
+    homePage: (context) => HomePage(),
   };
 
   static String homePage = '/';

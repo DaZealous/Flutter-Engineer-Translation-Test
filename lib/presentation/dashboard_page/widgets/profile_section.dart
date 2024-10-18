@@ -98,7 +98,7 @@ class ProfileSection extends HookWidget {
                   width: 50,
                 ),
               ),
-            )
+            ),
           ],
         ),
         Column(
