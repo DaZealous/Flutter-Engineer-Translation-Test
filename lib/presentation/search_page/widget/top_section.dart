@@ -45,7 +45,7 @@ class TopSection extends HookWidget {
               width: 25
             ),
             iconColor: Colors.black,
-            padding: 12.00,
+            padding: 10.00,
             backgroundColor: Colors.white,
           ),
         ),

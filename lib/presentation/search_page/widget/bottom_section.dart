@@ -58,7 +58,7 @@ class BottomSection extends HookWidget {
                     const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                   ),
                   iconColor: Colors.white,
-                  padding: 12.00,
+                  padding: 10.00,
                   backgroundColor: Colors.grey.withOpacity(
                     0.6,
                   ),
@@ -76,7 +76,7 @@ class BottomSection extends HookWidget {
                   width: 25,
                 ),
                 iconColor: Colors.white,
-                padding: 12.00,
+                padding: 10.00,
                 backgroundColor: Colors.grey.withOpacity(
                   0.6,
                 ),
@@ -88,7 +88,7 @@ class BottomSection extends HookWidget {
         ScaleTransition(
           scale: zoomAnimation,
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
             decoration: BoxDecoration(
                 borderRadius: const BorderRadius.all(
                   Radius.circular(50),

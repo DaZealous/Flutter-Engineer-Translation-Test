@@ -28,7 +28,7 @@ class DashboardPage extends StatelessWidget {
           ),
           SafeArea(
             child: SizedBox(
-              height: MediaQuery.of(context).size.height / 2.18,
+              height: MediaQuery.of(context).size.height / 2.15,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: ProfileSection(

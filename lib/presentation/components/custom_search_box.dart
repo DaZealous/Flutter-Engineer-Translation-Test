@@ -8,7 +8,7 @@ class CustomSearchBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        // contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10.0),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10.0),
         prefixIcon: Padding(
           padding: const EdgeInsets.all(15.0),
           child: AssetsData.searchIcon.svgPicture(

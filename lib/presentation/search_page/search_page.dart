@@ -14,10 +14,10 @@ class SearchPage extends HookWidget {
       child: Scaffold(
         body: Stack(
           children: [
-            const MapWidget(),
+            MapWidget(),
             SafeArea(
               child: Padding(
-                padding: const EdgeInsets.all(40.0),
+                padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 30),
                 child: Column(
                   children: [
                     TopSection(),

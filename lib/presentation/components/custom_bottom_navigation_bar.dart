@@ -66,7 +66,7 @@ class CustomBottomNavigationBar extends HookWidget {
                   return CustomButton(
                     image: items[index],
                     iconColor: Colors.white,
-                    padding: index == selectedIndex ? 10.00 : 12.00,
+                    padding: index == selectedIndex ? 10.00 : 8.00,
                     backgroundColor: index == selectedIndex
                         ? AppColors.primary
                         : Colors.black,

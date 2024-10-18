@@ -33,8 +33,8 @@ enum AssetsData {
   }) =>
       SvgPicture.asset(
         absolutePath,
-        height: height ?? 40,
-        width: width ?? 40,
+        height: height ?? 25,
+        width: width ?? 25,
         colorFilter: color == null ? null : ColorFilter.mode(color, BlendMode.srcIn),
       );
 

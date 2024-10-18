@@ -26,7 +26,7 @@ class CustomOffers extends HookWidget {
 
     useEffect(() {
       final timer = Timer.periodic(const Duration(milliseconds: 2), (timer) {
-        if (counter.value <= (int.tryParse(middleTitle) ?? 1000)) {
+        if (counter.value < (int.tryParse(middleTitle) ?? 1000)) {
           counter.value++;
         } else {
           timer.cancel();
