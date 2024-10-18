@@ -11,10 +11,10 @@ class BottomSection extends HookWidget {
 
   final animationService = GetIt.I<AnimationService>();
   final List popupItems = [
-    {'image': AssetsData.verifyIcon, 'title': 'Cosy areas'},
-    {'image': AssetsData.walletIcon, 'title': 'Price'},
-    {'image': AssetsData.infrastructureIcon, 'title': 'Infrastructure'},
-    {'image': AssetsData.layersIcon, 'title': 'Without any layer'},
+    {'image': AssetsData.verifyIcon.absolutePath, 'title': 'Cosy areas'},
+    {'image': AssetsData.walletIcon.absolutePath, 'title': 'Price'},
+    {'image': AssetsData.infrastructureIcon.absolutePath, 'title': 'Infrastructure'},
+    {'image': AssetsData.layersIcon.absolutePath, 'title': 'Without any layer'},
   ];
 
   @override
