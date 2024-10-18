@@ -4,6 +4,7 @@ import 'package:flutter_engineer_translation_test/core/utils/assets_data.dart';
 import 'package:flutter_engineer_translation_test/presentation/components/custom_button.dart';
 import 'package:flutter_engineer_translation_test/presentation/search_page/widget/custom_popup_item.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get_it/get_it.dart';
 
 class BottomSection extends HookWidget {
@@ -13,12 +14,17 @@ class BottomSection extends HookWidget {
   final List popupItems = [
     {'image': AssetsData.verifyIcon.absolutePath, 'title': 'Cosy areas'},
     {'image': AssetsData.walletIcon.absolutePath, 'title': 'Price'},
-    {'image': AssetsData.infrastructureIcon.absolutePath, 'title': 'Infrastructure'},
+    {
+      'image': AssetsData.infrastructureIcon.absolutePath,
+      'title': 'Infrastructure'
+    },
     {'image': AssetsData.layersIcon.absolutePath, 'title': 'Without any layer'},
   ];
+  final selectedItem = useState(0);
 
   @override
   Widget build(BuildContext context) {
+
     final animationController =
         useAnimationController(duration: const Duration(milliseconds: 1200));
 
@@ -44,9 +50,12 @@ class BottomSection extends HookWidget {
                   _showPopupMenu(context, details.globalPosition);
                 },
                 child: CustomButton(
-                  image: AssetsData.layersIcon.svgPicture(
+                  image: SvgPicture.asset(
+                    popupItems[selectedItem.value]['image'],
                     height: 25,
                     width: 25,
+                    colorFilter:
+                    const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                   ),
                   iconColor: Colors.white,
                   padding: 12.00,
@@ -118,23 +127,25 @@ class BottomSection extends HookWidget {
     double top = offset.dy;
 
     await showMenu(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30)
+      ),
       context: context,
       position: RelativeRect.fromLTRB(left, top, left, top),
       items: List.generate(popupItems.length, (index) {
         return PopupMenuItem(
+          onTap: (){
+            selectedItem.value = index;
+          },
           value: index,
           child: CustomPopup(
-            index: index,
+            isSelected: selectedItem.value == index,
             title: popupItems[index]['title'],
             imagePath: popupItems[index]['image'],
           ),
         );
-        // return PopupMenuItem(child: Text(''));
       }),
       elevation: 8.0,
-    ).then((value) {
-      // NOTE: even you didnt select item this method will be called with null of value so you should call your call back with checking if value is not null , value is the value given in PopupMenuItem
-      if (value != null) print(value);
-    });
+    );
   }
 }

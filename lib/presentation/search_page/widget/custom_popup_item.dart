@@ -6,11 +6,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 class CustomPopup extends ConsumerWidget {
   const CustomPopup(
       {super.key,
-      required this.index,
+      required this.isSelected,
       required this.title,
       required this.imagePath});
 
-  final int index;
+  final bool isSelected;
   final String title;
   final String imagePath;
 
@@ -20,10 +20,11 @@ class CustomPopup extends ConsumerWidget {
       children: [
         SvgPicture.asset(
           imagePath,
-          height: 20,
-          width: 20,
-          colorFilter:
-              const ColorFilter.mode(AppColors.accent, BlendMode.srcIn),
+          height: 25,
+          width: 25,
+          colorFilter: ColorFilter.mode(
+              isSelected ? AppColors.primary : AppColors.accent,
+              BlendMode.srcIn),
         ),
         const SizedBox(
           width: 10,
@@ -33,7 +34,7 @@ class CustomPopup extends ConsumerWidget {
           overflow: TextOverflow.ellipsis,
           style: Theme.of(context)
               .textTheme
-              .titleSmall
+              .titleMedium
               ?.copyWith(color: AppColors.accent),
         ),
       ],
