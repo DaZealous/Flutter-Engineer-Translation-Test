@@ -1,16 +1,9 @@
 # flutter_engineer_translation_test
 
-A new Flutter project.
+A Moniepoint Flutter Assessment Project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Below is the link to the apk file:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Lab: Moniepiont Test](https://drive.google.com/file/d/1c_ebBe1ctHkqPvA5xjwQbCcg-fzrb5Nb/view?pli=1)
