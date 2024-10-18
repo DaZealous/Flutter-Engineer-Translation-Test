@@ -14,9 +14,9 @@ class MapWidget extends HookWidget {
     const LatLng(6.521778, 3.306678),
     const LatLng(6.51960, 3.307378),
     const LatLng(6.51860, 3.312378),
-    const LatLng(6.51360, 3.312378),
-    const LatLng(6.51250, 3.305178),
-    const LatLng(6.50860, 3.310478),
+    const LatLng(6.51460, 3.312378),
+    const LatLng(6.51350, 3.305178),
+    const LatLng(6.50990, 3.310478),
   ];
 
   final animationService = GetIt.I<AnimationService>();
@@ -100,16 +100,16 @@ class MapWidget extends HookWidget {
 
   _buildMarker(LatLng latLng) {
     return Marker(
-      width: 50,
-      height: 50,
+      width: 40,
+      height: 40,
       point: latLng,
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.primary,
           borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(12),
-            topRight: Radius.circular(12),
-            bottomRight: Radius.circular(12),
+            topLeft: Radius.circular(8),
+            topRight: Radius.circular(8),
+            bottomRight: Radius.circular(8),
           ),
           boxShadow: [
             BoxShadow(
@@ -123,6 +123,7 @@ class MapWidget extends HookWidget {
           child: Icon(
             Icons.shopping_cart_outlined,
             color: Colors.white,
+            size: 20,
           ),
         ),
       ),

@@ -78,3 +78,5 @@ TODO.md
 /android/app/production/release/app-production-release.aab
 
 flutter_01.png
+/android/app/release/output-metadata.json
+/android/app/release/app-release.apk
